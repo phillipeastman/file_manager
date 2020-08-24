@@ -17,3 +17,27 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/', function (Request $request) {
+    return 'Alive: 1';
+});
+
+Route::get(
+    '/files',
+    'FileMetadataController@index'
+);
+
+Route::get(
+    '/file/{fileID}',
+    'FileMetadataController@show'
+);
+
+Route::post(
+    '/file/upload',
+    'FileMetadataController@store'
+);
+
+Route::post(
+    '/file/edit',
+    'FileMetadataController@update'
+);
