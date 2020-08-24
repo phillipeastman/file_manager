@@ -37,5 +37,8 @@ Start the local development server
 `php artisan serve`
 
 Edit your etc hosts file
+Depending on how you set this up, you may need to add dns routing, or modify the etc hosts file, or even change the angular baseURL in the filemanager-api service to match your configuration.  I set my hosts file to: 
 
-`127.0.0.1   filemanager-api.test`
+`192.168.10.10   filemanager-api.test`
+
+since I was using the homestead vagrant virtual machine, and that was it's default ip.
