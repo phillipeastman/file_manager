@@ -8,7 +8,10 @@ use Faker\Generator as Faker;
 $factory->define(file_metadata::class, function (Faker $faker) {
     return [
         'title' => $faker->title,
-        'description' => $faker->description,,
-        'path' => '/test/files.mp4'
+        'description' => $faker->description,
+        'original_filename' => 'JambaJuice.jpg',
+        'file_type' => 'jpg',
+        'tags' => $faker->tags,
+        'path' => 'http://filemanager-api.test/file.jpg'
     ];
 });
